@@ -71,6 +71,14 @@ body {
     background: rgba(255, 255, 255, .5);
 }
 
+.git-link {
+    position: absolute;
+    padding: 20px;
+    i {
+        vertical-align: bottom;
+        margin-right: 5px;
+    }
+}
 
 textarea {
     resize: none;

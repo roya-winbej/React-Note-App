@@ -3,6 +3,7 @@
 var gulp = require('gulp');
 var del = require('del');
 
+var ghPages = require('gulp-gh-pages');
 
 
 // Load plugins
@@ -178,6 +179,13 @@ gulp.task('watch', ['html', 'fonts', 'bundle'], function() {
 
     // Watch image files
     gulp.watch('app/images/**/*', reload);
+});
+
+
+//deploy
+gulp.task('deploy', function() {
+    return gulp.src('dist/**/*')
+      .pipe(ghPages());
 });
 
 // Build
